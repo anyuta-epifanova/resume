@@ -1,0 +1,104 @@
+{{#with program.excursion}}
+<div>
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>{{location.city}}, {{location.country}}</h2>
+        {{date}}
+    </div>
+
+    <hr>
+
+    {{#with program.[0]}}
+    <div>
+        <div>
+            <h3>{{name}} - {{type}} ({{duration}})</h3>
+        </div>
+
+        {{#with details.museum}}
+        <div>
+            <div>
+                <h4>{{name}}</h4>
+
+                {{#with location}}
+                <address>({{address}}, {{city}}, {{country}})</address>
+                {{/with}}
+            </div>
+
+            <div>
+                <ol>
+                    {{#each exhibits}}
+                    <li>
+                        {{name}} - {{description}}
+                        <p>
+                            {{#if artist}}
+                            Artist: {{artist}}
+                            {{/if}}
+                        </p>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+        {{/with}}
+
+        {{#with details.guide}}
+        <div>
+            Guide: {{name}} <br>
+            Language: {{language}} <br>
+            Rating: {{rating}}
+        </div>
+        {{/with}}
+    </div>
+    {{/with}}
+
+    <br>
+    <hr>
+
+    {{#with program.[1]}}
+    <div>
+        <div>
+            <h3>{{name}} - {{type}} ({{duration}})</h3>
+        </div>
+
+        {{#with details}}
+        <div>
+            {{#with venue}}
+            <div>
+                <h4>{{name}}</h4>
+
+                {{#with location}}
+                <address>({{address}}, {{city}}, {{country}})</address>
+                {{/with}}
+            </div>
+            {{/with}}
+            <br>
+            <div>
+                Performers:
+                <ol>
+                    {{#each performers}}
+                    <li>
+                        {{name}} - {{type}}
+                        <br> <br>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+
+            {{#with guide}}
+            <div>
+                Guide: {{name}} <br>
+                Language: {{language}} <br>
+                Rating: {{rating}}
+            </div>
+            {{/with}}
+        </div>
+        {{/with}}
+    </div>
+    {{/with}}
+</div>
+{{/with}}
