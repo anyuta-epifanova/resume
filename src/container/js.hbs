@@ -1,0 +1,114 @@
+<div>
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+
+    <div>
+        <description>{{description}}</description>
+        {{#with history}}
+        <p>JS was founded by {{founder}} in {{year}}</p>
+        {{/with}}
+    </div>
+
+    <div>
+        <div>
+            <h2>Types</h2>
+        </div>
+        <div>
+            <ul>
+                {{#each types}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h2>Syntax</h2>
+        </div>
+        {{#with syntax}}
+        <div>
+            Variables:
+            {{> ul data=variables}}
+
+            Functions:
+            {{> ul data=functions}}
+
+            Conditionals:
+            {{> ul data=conditionals}}
+
+            Loops:
+            {{> ul data=loops}}
+
+            Classes:
+            {{> ul data=classes}}
+        </div>
+        {{/with}}
+    </div>
+
+    <div>
+        <div>
+            <h2>Features</h2>
+        </div>
+
+        <div>
+            {{> ul data=features}}
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h2>Libraries</h2>
+        </div>
+
+        <div>
+            <ul>
+                {{#each libraries}}
+                <li>
+                    <span class="badge rounded-pill text-bg-info">{{this}}</span>
+                </li>
+                {{/each}}
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h2>Tools</h2>
+        </div>
+
+        <div>
+            <ul>
+                <li>
+                    <span class="badge text-bg-primary">{{tools.[0]}}</span>
+                    <span class="badge text-bg-secondary">{{tools.[1]}}</span>
+                    <span class="badge text-bg-success">{{tools.[2]}}</span>
+                    <span class="badge text-bg-danger">{{tools.[3]}}</span>
+                    <span class="badge text-bg-warning">{{tools.[4]}}</span>
+                    <span class="badge text-bg-info">{{tools.[5]}}</span>
+                    <span class="badge text-bg-primary">{{tools.[6]}}</span>
+                    <span class="badge text-bg-secondary">{{tools.[7]}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h2>Community</h2>
+        </div>
+
+        <div>
+            <ul>
+                {{#each community}}
+                <li>
+                    <button type="button" class="btn btn-link">{{name}}</button> ({{type}})
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
