@@ -1,0 +1,160 @@
+<div>
+    <h1>{{name}} <span class="badge bg-secondary">{{price}}$</span></h1>
+</div>
+<hr class="border border-primary border-3 opacity-75">
+<div>
+    <em>{{description}}</em>
+</div>
+<br>
+<div>
+    Category: {{category}}
+</div>
+
+<hr>
+
+{{#with features}}
+<div>
+    <h2>Features</h2>
+
+    {{#with processor}}
+    <div>
+        <p>
+            <b>Processor</b>
+        </p>
+        <p>Brand: {{brand}}</p>
+        <p>Model: {{model}}</p>
+        <p>Speed: {{speed}}</p>
+        <p>Cores: {{cores}}</p>
+        <p>Cache: {{cache}}</p>
+    </div>
+    {{/with}}
+
+    <hr>
+
+    {{#with memory}}
+    <div>
+        <p>
+            <b>Memory</b>
+        </p>
+        <p>Type: {{type}}</p>
+        <p>Size: {{size}}</p>
+        <p>Speed: {{speed}}</p>
+    </div>
+    {{/with}}
+
+    <hr>
+
+    {{#with storage}}
+    <div>
+        <p>
+            <b>Storage</b>
+        </p>
+        <p>Type: {{type}}</p>
+        <p>Size: {{size}}</p>
+    </div>
+    {{/with}}
+
+    <hr>
+
+    {{#with display}}
+    <div>
+        <p>
+            <b>Display</b>
+        </p>
+        <p>Size: {{size}}</p>
+        <p>Resolution: {{resolution}}</p>
+        <p>Technology: {{technology}}</p>
+        <p>Color space: {{color_space}}</p>
+        <p>Brightness: {{brightness}}</p>
+        <p>Refresh rate: {{refresh_rate}}</p>
+    </div>
+    {{/with}}
+
+    <hr>
+
+    {{#with graphics}}
+    <div>
+        <p>
+            <b>Graphics</b>
+        </p>
+        <p>Brand: {{brand}}</p>
+        <p>Model: {{model}}</p>
+        <p>Memory: {{memory}}</p>
+    </div>
+    {{/with}}
+
+    <hr>
+
+    <div>
+        <p>
+            <b>Ports:</b>
+        </p>
+
+        <ol>
+            {{#each ports}}
+
+            <li>
+                {{type}}
+                <span class="badge text-bg-info">{{count}}</span>
+                <ul>
+                    {{#each features}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+                <br>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+
+    <hr>
+
+    {{#with battery}}
+    <div>
+        <p>
+            <b>Battery</b>
+        </p>
+        <p>Type: {{type}}</p>
+        <p>Capacity: {{capacity}}</p>
+        <p>Life: {{life}}</p>
+    </div>
+    {{/with}}
+
+    <hr>
+
+    <div>
+        <p>
+            <b>Weight:</b>
+            {{weight}}
+        </p>
+        {{#with dimensions}}
+        <div>
+            <p>
+                <b>Dimensions</b>
+            </p>
+            <p>Height: {{height}}</p>
+            <p>Width: {{width}}</p>
+            <p>Depth: {{depth}}</p>
+        </div>
+        {{/with}}
+        <p>
+            <b>Operating system:</b>
+            {{operating_system}}
+        </p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Accessories</h2>
+
+        <ul>
+            {{#each accessories}}
+            <li>
+                {{name}} <span class="badge text-bg-info">{{price}}$</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+{{/with}}
