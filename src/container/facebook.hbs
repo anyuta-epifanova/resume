@@ -1,0 +1,103 @@
+<div>
+    <h1>{{name}}</h1>
+</div>
+
+<p class="h3">Users</p>
+
+<div>
+    <ul>
+        {{#each users}}
+        <li>
+            <b>{{name}}</b> ({{age}} y.o.)
+            <br>
+
+            <span class="badge rounded-pill text-bg-primary">{{gender}}</span>
+
+            <br>
+            ID: {{id}}
+            <br>
+            {{#if friends}}
+            Friends:
+            {{/if}}
+            <ul>
+                {{#each friends}}
+                <li>
+                    <b>{{name}}</b> ({{age}} y.o.)
+                    <br>
+                    <span class="badge rounded-pill text-bg-primary">{{gender}}</span>
+                    <br>
+                    ID: {{id}}
+
+                    {{#if mutual_friends}}
+                    <br>
+                    Mutual friends:
+                    {{/if}}
+                    <ul>
+                        {{#each mutual_friends}}
+                        <li>
+                            <b>{{name}}</b> ({{age}} y.o.)
+                            <br>
+                            <span class="badge rounded-pill text-bg-primary">{{gender}}</span>
+                            <br>
+                            ID: {{id}}
+
+                            {{#if mutual_friends}}
+                            <br>
+                            Mutual friends:
+                            {{/if}}
+                            <ul>
+                                {{#each mutual_friends}}
+                                <li>
+                                    <b>{{name}}</b> ({{age}} y.o.)
+                                    <br>
+                                    <span class="badge rounded-pill text-bg-primary">{{gender}}</span>
+                                    <br>
+                                    ID: {{id}}
+                                </li>
+                                <br>
+                                {{/each}}
+                            </ul>
+                        </li>
+
+                        {{/each}}
+                    </ul>
+                </li>
+                <br>
+                {{/each}}
+            </ul>
+
+            {{#if groups}}
+            Groups:
+            {{/if}}
+
+            <div>
+                <ol>
+                    {{#each groups}}
+                    <li>
+                        <b>{{name}}</b>
+                        <br>
+                        <em>{{description}}</em>
+                        <br>
+                        Members:
+                        <ol>
+                            {{#each members}}
+                            <li>
+                                <b>{{name}}</b> ({{age}} y.o.)
+                                <br>
+                                <em>{{gender}}</em>
+                                <br>
+                                ID: {{id}}
+                            </li>
+                            {{/each}}
+                        </ol>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <hr>
+        </li>
+        {{/each}}
+
+    </ul>
+
+</div>
