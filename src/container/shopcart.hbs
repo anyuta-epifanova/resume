@@ -1,0 +1,87 @@
+<header class="m-5">
+    <div class="row">
+        <section class="col-12">
+            <div class="card mt-2 mb-5">
+                {{#with navigation}}
+                <div class="nav">
+                    {{#each links}}
+                    <div class="nav-item">
+                        <a href="{{href}}" class="nav-link">{{text}}</a>
+                    </div>
+                    {{/each}}
+                    <a href="#" class="nav-link disabled">Disabled</a>
+                </div>
+                {{/with}}
+            </div>
+        </section>
+
+        {{#with header}}
+        <section class="mb-4">
+            <h1 class="mb-3">{{title}}</h1>
+            {{#with button}}
+            <a href="{{link}}" class="btn btn-outline-secondary">{{text}}</a>
+            {{/with}}
+        </section>
+        {{/with}}
+
+        <hr class="my-4">
+
+        {{> cartGoodsItem}}
+
+        <hr class="my-4">
+
+        {{#with total}}
+        <div class="mb-3">
+            <h3>{{title}}</h2>
+                <b class="fs-3">{{amount}}</b>
+                <p>{{delivery}}</p>
+
+                {{#each buttons}}
+                <div>
+                    {{#if isSuccess}}
+                    <a type="button" class="btn btn-success mb-3" href="{{link}}">
+                        {{text}}
+                    </a>
+                    <br>
+                    {{else}}
+                    <a type="button" class="btn btn-outline-success" href="{{link}}">
+                        {{text}}
+                    </a>
+                    {{/if}}
+                </div>
+                {{/each}}
+        </div>
+        {{/with}}
+
+        <hr class="my-4">
+
+        {{#with goodsOtherBlock}}
+        <div>
+            <h2 class="text-center mb-3">{{title}}</h2>
+
+            <div class="row">
+                {{#each cards}}
+                <div class="col-4 mb-3">
+                    <div class="card">
+                        <img src="{{image}}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{title}}
+                                {{#if isHot}} <span
+                                    class="badge text-bg-warning text-light rounded-pill">HOT!</span>{{/if}}
+                                {{#if isNew}} <span class="badge text-bg-primary rounded-pill">New</span> {{/if}}
+                            </h5>
+                            <p class="card-text">{{description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+        {{/with}}
+
+        <hr class="my-4">
+
+
+    </div>
+</header>
