@@ -7,28 +7,25 @@
     <div>
         <ol>
             {{#each languages}}
-            <li>
+            <li class="mb-4">
                 <div>
                     <h2>{{name}}</h2>
-                    Version: {{version}}
-                    <br> <br>
+                    <p class="mb-4">Version: {{version}}</p>
                     <description>{{description}}</description>
                 </div>
-                <br>
 
                 {{#if elements}}
-                <div>
-                    Elements:
-                    <br>
-                    <br>
+                <div class="mt-3">
+                    <p class="mb-4">Elements:</p>
+
                     <ul>
                         {{#each elements}}
-                        <li>
+                        <li class="mb-3">
                             <strong>{{name}}</strong>
                             <description>- {{description}}</description>
-                            <br> <br>
-                            Attributes:
-                            <br>
+
+                            <p class="my-3">Attributes:</p>
+
                             <ol>
                                 {{#each attributes}}
                                 <li>
@@ -38,27 +35,22 @@
                                 {{/each}}
                             </ol>
                         </li>
-                        <br>
                         {{/each}}
                     </ul>
                 </div>
                 {{/if}}
 
                 {{#if properties}}
-                <div>
+                <div class="mt-4">
                     <div>
-                        Properties:
-                        <br>
-                        <br>
+                        <p class="mb-3">Properties:</p>
+
                         <ul>
                             {{#each properties}}
-                            <li>
+                            <li class="mb-3">
                                 <strong>{{name}}</strong>
                                 <description> - {{description}}</description>
-                                <br>
-                                <br>
-                                Values:
-                                <br>
+                                <p class="my-3">Values:</p>
                                 <ul>
                                     {{#each values}}
                                     <li>
@@ -68,7 +60,6 @@
                                     {{/each}}
                                 </ul>
                             </li>
-                            <br>
                             {{/each}}
                         </ul>
                     </div>
@@ -76,17 +67,13 @@
 
                     {{#if functions}}
                     <div>
-                        Functions:
-                        <br>
-                        <br>
+                        <p class="mb-3">Functions:</p>
                         <ul>
                             {{#each functions}}
-                            <li>
+                            <li class="mb-3">
                                 <strong>{{name}}</strong>
                                 <description>- {{description}}</description>
-                                <br> <br>
-                                Parameters:
-                                <br>
+                                <p class="my-3">Parameters:</p>
                                 <ul>
                                     {{#each parameters}}
                                     <li>
@@ -97,7 +84,6 @@
                                     {{/each}}
                                 </ul>
                             </li>
-                            <br>
                             {{/each}}
                         </ul>
                     </div>

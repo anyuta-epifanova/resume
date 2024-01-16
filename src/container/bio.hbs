@@ -2,10 +2,10 @@
     <div>
         <h1>{{name}}</h1>
     </div>
-    <div>
+    <div class="mb-3">
         <strong>({{birthdate}} - {{deathdate}})</strong>
     </div>
-    <br>
+
     <div>
         <p>
             <b>Place of birth:</b> {{birthplace}}
@@ -40,7 +40,7 @@
     </div>
 
 
-    <div>
+    <div class="mb-5">
         <b><big>Education</big></b>
         {{#with education.[0]}}
         <div>
@@ -59,15 +59,14 @@
         </div>
         {{/with}}
     </div>
-    <br>
+
     <div>
         <b>Notable publications:</b>
         <ul>
             {{#each notable_publications}}
-            <li>
+            <li class="mb-3">
                 "{{title}}" ({{year}})
                 <br>{{publisher}}
-                <br><br>
             </li>
             {{/each}}
         </ul>
@@ -109,17 +108,16 @@
         <b>Major discoveries: </b>
         <ul>
             {{#each major_discoveries}}
-            <li>
+            <li class="mb-2">
                 {{title}} ({{year}}):
                 <br>
                 <em>{{description}}</em>
             </li>
-            <br>
             {{/each}}
         </ul>
 
-        <b>Contributions: </b>
-        <br>
+        <b class="mb-2">Contributions: </b>
+
         {{#with contributions}}
         {{title}}
         <ol>
@@ -129,7 +127,7 @@
                 <em>{{description}}</em>
             </li>
         </ol>
-        <br>
+
         {{/with}}
     </div>
 

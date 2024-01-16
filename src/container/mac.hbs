@@ -2,10 +2,10 @@
     <h1>{{name}} <span class="badge bg-secondary">{{price}}$</span></h1>
 </div>
 <hr class="border border-primary border-3 opacity-75">
-<div>
+<div class="mb-4">
     <em>{{description}}</em>
 </div>
-<br>
+
 <div>
     Category: {{category}}
 </div>
@@ -98,10 +98,9 @@
                 <span class="badge text-bg-info">{{count}}</span>
                 <ul>
                     {{#each features}}
-                    <li>{{this}}</li>
+                    <li class="mb-2">{{this}}</li>
                     {{/each}}
                 </ul>
-                <br>
             </li>
             {{/each}}
         </ol>

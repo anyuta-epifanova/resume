@@ -56,8 +56,7 @@
     </div>
     {{/with}}
 
-    <br>
-    <hr>
+    <hr class="my-3">
 
     {{#with program.[1]}}
     <div>
@@ -68,7 +67,7 @@
         {{#with details}}
         <div>
             {{#with venue}}
-            <div>
+            <div class="mb-3">
                 <h4>{{name}}</h4>
 
                 {{#with location}}
@@ -76,14 +75,13 @@
                 {{/with}}
             </div>
             {{/with}}
-            <br>
+
             <div>
                 Performers:
                 <ol>
                     {{#each performers}}
-                    <li>
+                    <li class="mb-4">
                         {{name}} - {{type}}
-                        <br> <br>
                     </li>
                     {{/each}}
                 </ol>
@@ -91,9 +89,9 @@
 
             {{#with guide}}
             <div>
-                Guide: {{name}} <br>
-                Language: {{language}} <br>
-                Rating: {{rating}}
+                <p>Guide: {{name}} </p>
+                <p>Language: {{language}} </p>
+                <p>Rating: {{rating}}</p>
             </div>
             {{/with}}
         </div>

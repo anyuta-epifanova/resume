@@ -16,9 +16,7 @@
                     <li>
                         <div>{{position}}</div>
 
-                        <br>
-
-                        <div>
+                        <div class="my-4">
                             {{duration.from}} -
 
                             {{#if duration.to}}
@@ -28,8 +26,6 @@
                             {{/if}}
                         </div>
 
-                        <br>
-
                         <div>
                             {{#if company.url}}
                             {{> link text=company.name href=company.url blank=true noLine=true}}
@@ -38,35 +34,24 @@
                             {{/if}}
                         </div>
 
-                        <br>
-                        <br>
-
-                        <div>
+                        <div class="mt-4 mb-3">
                             <strong>Projects ({{projectAmount}})</strong>
                         </div>
-
-                        <br>
 
                         <ul>
                             {{#each projects}}
                             <li>
                                 <div>{{> link text=name href=url blank=true noLine=true}}</div>
 
-                                <br>
-
-                                <div>
+                                <div class="my-3">
                                     <p>{{about}}</p>
                                 </div>
-
-                                <br>
 
                                 <div>
                                     <em>Project stacks ({{stackAmount}})</em>
                                 </div>
 
-                                <br>
-
-                                <div>
+                                <div class="my-3">
                                     <ul>
                                         {{#each stacks}}
                                         <li>{{name}}</li>
@@ -74,13 +59,11 @@
                                     </ul>
                                 </div>
 
-                                <br>
-
                                 <div>
                                     <em>Project awards</em>
                                 </div>
-                                <br>
-                                <div>
+
+                                <div class="my-3">
                                     <ul>
                                         {{#each awards}}
                                         <li>{{name}}</li>
@@ -91,7 +74,6 @@
                             {{/each}}
                         </ul>
                     </li>
-                    <br>
                     {{/each}}
                 </ul>
             </div>
