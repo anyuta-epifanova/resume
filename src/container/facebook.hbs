@@ -11,7 +11,7 @@
             <b>{{name}}</b> ({{age}} y.o.)
             <br>
 
-            <span class="badge rounded-pill text-bg-primary">{{gender}}</span>
+            <div class="badge rounded-pill text-bg-primary">{{gender}}</div>
 
             <br>
             ID: {{id}}
@@ -19,7 +19,7 @@
             {{#if friends}}
             Friends:
             {{/if}}
-            <ul>
+            <ul class="mb-4">
                 {{#each friends}}
                 <li>
                     <b>{{name}}</b> ({{age}} y.o.)
@@ -62,7 +62,6 @@
                         {{/each}}
                     </ul>
                 </li>
-                <br>
                 {{/each}}
             </ul>
 

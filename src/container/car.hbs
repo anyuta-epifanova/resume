@@ -12,11 +12,11 @@
 
         {{#with interior}}
         <div>
-            <h3>Interior</h3>
-            <br>
+            <h3 class="mb-2">Interior</h3>
+
 
             {{#with seats}}
-            <div>
+            <div class="mb-3">
                 {{color}} {{material}} seats
                 {{#if heated}}
                 with heating
@@ -32,15 +32,12 @@
             </div>
             {{/with}}
 
-            <br>
-
             {{#with dashboard}}
-            <div>
+            <div class="mb-3">
                 <p>The dashboard is made of {{color}} {{material}}</p>
                 {{#with display}}
                 <div>
-                    <b>Display</b>
-                    <br>
+                    <b class="mb-2">Display</b>
                     <p>type: {{type}} </p>
                     <p>size: {{size}} </p>
                     <p>resolution: {{resolution}} </p>
@@ -54,12 +51,9 @@
             </div>
             {{/with}}
 
-            <br>
-
             {{#with audio}}
-            <div>
-                <b>Audio</b>
-                <br>
+            <div class="mb-3">
+                <b class="mb-2">Audio</b>
                 <p>system: {{system}}</p>
                 <p>speakers: {{speakers}}</p>
                 <p>subwoofer:
@@ -83,16 +77,14 @@
         </div>
         {{/with}}
 
-        <br>
-        <hr>
+        <hr class="my-5">
 
         {{#with exterior}}
         <div>
-            <h3>Exterior</h3>
-            <br>
+            <h3 class="mb-2">Exterior</h3>
             {{#with wheels}}
-            <div>
-                <b>Wheels</b> <br>
+            <div class="mb-4">
+                <b>Wheels</b>
 
                 <p>size: {{size}}</p>
                 <p>type: {{type}}</p>
@@ -100,11 +92,9 @@
             </div>
             {{/with}}
 
-            <br>
-
             {{#with headlights}}
-            <div>
-                <b>Headlights</b> <br>
+            <div class="mb-4">
+                <b>Headlights</b>
 
                 <p>type: {{type}}</p>
                 <p>brightness: {{brightness}}</p>
@@ -116,11 +106,10 @@
             </div>
             {{/with}}
 
-            <br>
 
             {{#with sunroof}}
             <div>
-                <b>Sunroof</b> <br>
+                <b>Sunroof</b>
 
                 <p>type: {{type}}</p>
                 <p>size: {{size}}</p>
@@ -135,21 +124,18 @@
         </div>
         {{/with}}
 
-        <br>
-        <hr>
+        <hr class="my-5">
 
         {{#with safety}}
         <div>
-            <h3>Safety</h3>
-            <br>
+            <h3 class="mb-3">Safety</h3>
 
             {{#with airbags}}
-            <div>
+            <div class="mb-3">
                 <b>Airbags:</b> front {{front}}, side {{side}}, knee {{knee}}, rear {{rear}}
             </div>
             {{/with}}
 
-            <br>
 
             {{#with assistance}}
             <div>
@@ -178,12 +164,12 @@
     </div>
     {{/with}}
 
-    <hr>
+    <hr class="my-5">
 
     {{#with engine}}
     <div>
-        <h3>Engine</h3>
-        <br>
+        <h3 class="mb-3">Engine</h3>
+
         <p>type: {{type}}</p>
         <p>displacement: {{displacement}}</p>
         <p>horsepower: {{horsepower}}</p>
@@ -192,8 +178,7 @@
     </div>
     {{/with}}
 
-    <br>
-    <hr>
+    <hr class="my-5">
 
     {{#with fuel_economy}}
     <div>
@@ -205,16 +190,14 @@
     </div>
     {{/with}}
 
-    <br>
-    <hr>
+    <hr class="my-5">
 
     {{#with price}}
     <div>
         <h3>Price</h3>
         <b>Total - {{total}}</b>
-        <br>
-        <br>
-        <p>base: {{base}}</p>
+
+        <p class="mt-4">base: {{base}}</p>
         <p>destination: {{destination}}</p>
         {{#with options}}
         <div>
